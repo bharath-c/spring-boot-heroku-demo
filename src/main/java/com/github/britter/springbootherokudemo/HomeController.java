@@ -36,6 +36,8 @@ public class HomeController {
     public HomeController(RecordRepository repository) {
         this.repository = repository;
     }
+    
+    // change someting to push the code into remote
 
     @RequestMapping(method = RequestMethod.GET)
     public String home(ModelMap model) {
@@ -46,7 +48,7 @@ public class HomeController {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public String insertData(ModelMap model, 
+    public String insertDataDummyData(ModelMap model, 
                              @ModelAttribute("insertRecord") @Valid Record record,
                              BindingResult result) {
         if (!result.hasErrors()) {
